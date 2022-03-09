@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <ui:composition template="/auth/shared/_layout.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{_LayoutController.siteName} | Dashboard"></h:outputText>
+        </ui:define>
+        <ui:define name="pagetitle">
+            <h:outputText value="Dashboard"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header" data-background-color="orange">
+                            <i class="material-icons">settings_accessibility</i>
+                        </div>
+                        <div class="card-content">
+                            <p class="category">Roles</p>
+                            <h3 class="card-title">#{dashboardController.totalRole}</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header" data-background-color="rose">
+                            <i class="material-icons">assured_workload</i>
+                        </div>
+                        <div class="card-content">
+                            <p class="category">Bureos</p>
+                            <h3 class="card-title">#{dashboardController.totalBureo}</h3>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="card card-stats">
+                        <div class="card-header" data-background-color="green">
+                            <i class="material-icons">sensors</i>
+                        </div>
+                        <div class="card-content">
+                            <p class="category">Countries</p>
+                            <h3 class="card-title">#{dashboardController.totalCountry}</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </ui:define>
+    </ui:composition>
+
+</html>
+
